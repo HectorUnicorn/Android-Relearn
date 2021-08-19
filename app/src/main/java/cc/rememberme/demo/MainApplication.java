@@ -8,6 +8,7 @@ import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
+import butterknife.ButterKnife;
 import cc.rememberme.demo.config.GlobalConfig;
 
 /**
@@ -19,6 +20,13 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        initLogger();
+        // butterknife
+        ButterKnife.setDebug(BuildConfig.DEBUG);
+    }
+
+    private void initLogger() {
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 .showThreadInfo(true)  // (Optional) Whether to show thread info or not. Default true
                 .methodCount(2)         // (Optional) How many method line to show. Default 2
@@ -32,6 +40,5 @@ public class MainApplication extends Application {
                 return GlobalConfig.LOG_DEBUG;
             }
         });
-
     }
 }

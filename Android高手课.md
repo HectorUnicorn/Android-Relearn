@@ -1,3 +1,5 @@
+[TOC]
+
 # Android高手课
 
 
@@ -728,17 +730,69 @@ StateListDrawable的padding属性是否会根据状态的改变而改变，true�
 
 ### 5.38 AndroidX
 
-#### 5.38.1 androidx.work
+[AndroidX官方文档](https://developer.android.com/jetpack/androidx)
+
+[AndroidX API]("https://developer.android.com/reference/androidx/packages")
+
+#### 5.38.1 AndroidX的系统性学习
+
+##### Support包的兼容性：[文档](https://developer.android.com/topic/libraries/support-library#api-versions)
+
+Support Library release 26.0.0 (July 2017) to Android 4.0 (**API level 14**) 
+
+```shell
+gradle -q dependencies your-app-project:dependencies
+```
+
+**最后一个版本：修订版 28.0.0 正式版**（2018 年 9 月 21 日）
+
+该版本是支持库 28.0.0 的稳定版，适合在生产环境中使用。这将是 `android.support` 包下的最后一次功能发布，建议开发者迁移到 [AndroidX](https://developer.android.com/jetpack/androidx)。
+
+
+
+##### Android X与Support包的映射关系
+
+[包映射关系](https://developer.android.com/jetpack/androidx/migrate/artifact-mappings)
+
+[类映射关系](https://developer.android.com/jetpack/androidx/migrate/class-mappings)
+
+##### AndroidX支持的最低版本是多少？
+
+参考Support包
+
+##### AndroidX的编译版本最低是多少？
+
+如果想使用AndroidX创建一个新的项目，需要将SDK编译版本设置为Android9.0 (28)以上
+
+
+
+##### refrences
+
+[Support 迁移到 AndroidX](https://www.jianshu.com/p/41de8689615d)
+
+[理解性简单阐述](https://blog.csdn.net/weixin_39069034/article/details/100169879)
+
+[Support历史阐述](https://juejin.cn/post/6898150034353684487)
+
+#### 5.38.2 androidx.work
 
 [AndroidX Work | WorkManager]("https://developer.android.google.cn/reference/androidx/work/package-summary")
 
 注意 `@data` annotation
+
+
 
 #### 5.39 沧海拾遗
 
 ```xml
 tools:srcCompat
 ```
+
+
+
+### 5.40 组件化
+
+[CC渐进式组件化]("https://github.com/luckybilly/CC")
 
 
 
@@ -764,15 +818,29 @@ tools:srcCompat
 
 
 
-## 9. Appendix
+## 9. 兼容性话题
 
-### 9.1 Awsome Androids
+[兼容性官方文档](https://developer.android.com/guide/practices/compatibility)
+
+
+
+
+
+## Appendix
+
+### 1 Awsome Androids
 
 [1. Awsome Android]("https://github.com/JStumpp/awesome-android")
 
-### 9.2 Awsome Projects
+### 2 Awsome Projects
 
 
 
-### 9.3 Best Practice
+### 3 Best Practice
+
+
+
+### 4 语义化版本控制
+
+https://semver.org/lang/zh-CN/
 

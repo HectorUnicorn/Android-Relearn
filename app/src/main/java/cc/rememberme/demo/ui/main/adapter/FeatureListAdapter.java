@@ -1,5 +1,6 @@
 package cc.rememberme.demo.ui.main.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
 import cc.rememberme.demo.model.FeatureItem;
+import cc.rememberme.demo.ui.butterknife.ButterKnifeActivity;
 import cc.rememberme.demo.ui.layout.LayoutDemoActivity;
 import cc.rememberme.demo.ui.main.listener.OnRVItemClickListener;
 
@@ -182,6 +184,9 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
                 break;
             case AOP:
 
+                break;
+            case BUTTER_KNIFE:
+                ButterKnifeActivity.startActivity((Activity) this.mContext);
                 break;
         }
     }

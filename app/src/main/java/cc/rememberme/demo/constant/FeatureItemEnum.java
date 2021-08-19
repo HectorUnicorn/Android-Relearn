@@ -38,7 +38,8 @@ public enum FeatureItemEnum {
     IPC(29, "IPC"),
     JNI_NKD(30, "NDK JNI"),
     HOTFIX(31, "热修复技术"),
-    AOP(32, "AOP编程");
+    AOP(32, "AOP编程"),
+    BUTTER_KNIFE(33, "ButterKnife");
 
     FeatureItemEnum(int id, String name) {
         this.id = id;

@@ -10,18 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RelearnAndroid">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ui.butterknife.ButterKnifeActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".MainTabActivity"
             android:label="@string/title_activity_main_tab"
             android:theme="@style/Theme.RelearnAndroid.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.layout.LayoutDemoActivity">
-        </activity>
+        <activity android:name=".ui.layout.LayoutDemoActivity"></activity>
     </application>
 
 </manifest>
