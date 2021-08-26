@@ -3,10 +3,12 @@ package cc.rememberme.demo;
 import android.app.Application;
 import android.support.annotation.Nullable;
 
+import com.didichuxing.doraemonkit.DoKit;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.tencent.mmkv.MMKV;
 
 import butterknife.ButterKnife;
 import cc.rememberme.demo.config.GlobalConfig;
@@ -20,10 +22,20 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        // logger
         initLogger();
+
         // butterknife
         ButterKnife.setDebug(BuildConfig.DEBUG);
+
+        // DoKit
+        new DoKit.Builder(this)
+                .productId("12345678")
+                .build();
+
+        String rootDir = MMKV.initialize(this);
+        System.out.println("mmkv root: " + rootDir);
+
     }
 
     private void initLogger() {

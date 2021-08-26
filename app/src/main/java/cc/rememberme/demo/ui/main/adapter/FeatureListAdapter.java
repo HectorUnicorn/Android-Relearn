@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
 import cc.rememberme.demo.model.FeatureItem;
+import cc.rememberme.demo.ui.OkHttpTestActivity;
 import cc.rememberme.demo.ui.butterknife.ButterKnifeActivity;
 import cc.rememberme.demo.ui.layout.LayoutDemoActivity;
 import cc.rememberme.demo.ui.main.listener.OnRVItemClickListener;
@@ -186,7 +187,10 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
 
                 break;
             case BUTTER_KNIFE:
-                ButterKnifeActivity.startActivity((Activity) this.mContext);
+                ButterKnifeActivity.startActivity((Activity) mContext);
+                break;
+            case OKHTTP:
+                OkHttpTestActivity.launch((Activity) mContext, "OK!");
                 break;
         }
     }
