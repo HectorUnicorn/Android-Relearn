@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RelearnAndroid">
         <activity
+            android:name=".ui.kotlin.KotlinMainActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.OkHttpTestActivity"
             android:exported="true" />
         <activity android:name=".ui.butterknife.ButterKnifeActivity" />

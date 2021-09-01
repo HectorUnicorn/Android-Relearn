@@ -5,14 +5,14 @@ import android.view.LayoutInflater;
 import android.widget.ScrollView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import cc.rememberme.demo.base.activity.BaseActivity;
 import cc.rememberme.demo.databinding.ActivityLayoutDemoBinding;
 
 /**
  * @author : guojialin
  * @date : 2021/8/8 14:28
  */
-public class LayoutDemoActivity extends AppCompatActivity {
+public class LayoutDemoActivity extends BaseActivity {
 
 
     private ActivityLayoutDemoBinding layoutBinding;

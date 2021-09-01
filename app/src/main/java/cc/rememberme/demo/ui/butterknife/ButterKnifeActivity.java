@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cc.rememberme.demo.R;
+import cc.rememberme.demo.base.activity.BaseActivity;
 
 @Deprecated
-public class ButterKnifeActivity extends AppCompatActivity {
+public class ButterKnifeActivity extends BaseActivity {
 
     public static void startActivity(Activity context) {
         Intent intent = new Intent(context, ButterKnifeActivity.class);

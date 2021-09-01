@@ -41,7 +41,8 @@ public enum FeatureItemEnum {
     AOP(32, "AOP编程"),
     BUTTER_KNIFE(33, "ButterKnife"),
     DOKIT(34, "DoKit"),
-    OKHTTP(35, "OkHttp");
+    OKHTTP(35, "OkHttp"),
+    KOTLIN(36, "Kotlin");
 
     FeatureItemEnum(int id, String name) {
         this.id = id;

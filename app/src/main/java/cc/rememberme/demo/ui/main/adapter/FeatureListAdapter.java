@@ -12,16 +12,13 @@ import com.orhanobut.logger.Logger;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
-import cc.rememberme.demo.model.FeatureItem;
 import cc.rememberme.demo.ui.OkHttpTestActivity;
 import cc.rememberme.demo.ui.butterknife.ButterKnifeActivity;
+import cc.rememberme.demo.ui.kotlin.KotlinMainActivity;
 import cc.rememberme.demo.ui.layout.LayoutDemoActivity;
 import cc.rememberme.demo.ui.main.listener.OnRVItemClickListener;
 
@@ -31,9 +28,6 @@ import cc.rememberme.demo.ui.main.listener.OnRVItemClickListener;
  */
 public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.ViewHolder> implements OnRVItemClickListener {
 
-
-    private List<FeatureItem> dataList = new ArrayList<>();
-
     private Context mContext;
 
     private LayoutInflater layoutInflater;
@@ -41,14 +35,8 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
     public FeatureListAdapter(Context context) {
         layoutInflater = LayoutInflater.from(context);
         mContext = context;
-        initFeatures();
     }
 
-    private void initFeatures() {
-        for (FeatureItemEnum enumItem : FeatureItemEnum.values()) {
-            dataList.add(new FeatureItem(enumItem, null));
-        }
-    }
 
     @NonNull
     @NotNull
@@ -74,21 +62,21 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull FeatureListAdapter.ViewHolder holder, int position) {
-        FeatureItem item = dataList.get(position);
+        FeatureItemEnum item = FeatureItemEnum.values()[position];
         holder.textItemView.setText(item.getId() + "  " + item.getName());
         holder.itemView.setTag(position);
     }
 
     @Override
     public int getItemCount() {
-        return dataList.size();
+        return FeatureItemEnum.values().length;
     }
 
     @Override
     public void OnItemClicked(View view, int position) {
-        FeatureItem item = dataList.get(position);
+        FeatureItemEnum item = FeatureItemEnum.values()[position];
         Logger.d(item);
-        switch (item.getItemEnum()) {
+        switch (item) {
             case LAYOUT:
                 Intent intent = new Intent(view.getContext(), LayoutDemoActivity.class);
                 mContext.startActivity(intent);
@@ -190,7 +178,10 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
                 ButterKnifeActivity.startActivity((Activity) mContext);
                 break;
             case OKHTTP:
-                OkHttpTestActivity.launch((Activity) mContext, "OK!");
+                OkHttpTestActivity.launch((Activity) mContext, item.getName());
+                break;
+            case KOTLIN:
+                KotlinMainActivity.launch((Activity) mContext, item.getName());
                 break;
         }
     }
