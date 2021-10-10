@@ -16,12 +16,13 @@ class Student(
 
     init {
         // 【3】初始化块
-        println("initializing student...") // 5
+        println("3. initializing student... $name") // 5
         subject = "math" // 8
     }
 
     // 【4】构造函数重载 / 次构造函数
     constructor(_name: String) : this(_name, 10) {
+        println("4. constructor... $score") // 5
         score = 20
     }
 
