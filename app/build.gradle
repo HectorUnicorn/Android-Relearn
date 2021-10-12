@@ -1,11 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    // drouter
+    id 'com.didi.drouter'
 }
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "cc.rememberme.demo"
@@ -79,5 +81,19 @@ dependencies {
     // moshi
     implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
 
+
+    // rxjava - 响应式编程
+    implementation "io.reactivex.rxjava3:rxjava:3.1.1"
+    // rxAndroid - https://github.com/ReactiveX/RxAndroid
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    // retrofit - A type-safe HTTP client for Android and Java.
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // hummer
+    implementation 'io.github.didi.hummer:hummer:0.4.1'
+
+    // drouter
+    api "io.github.didi:drouter-api:2.1.3"
 
 }

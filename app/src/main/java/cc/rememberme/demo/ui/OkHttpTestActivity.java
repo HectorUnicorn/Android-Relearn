@@ -34,7 +34,7 @@ public class OkHttpTestActivity extends BaseActivity {
      * https://juejin.cn/post/6844903704278073357
      */
     private static final Moshi MOSHI = new Moshi.Builder().build();
-    private static final String ENDPOINT = "https://api.github.com/repos/square/okhttp/contributors";
+    public static final String ENDPOINT = "https://api.github.com/repos/square/okhttp/contributors";
 
     private ActivityOkHttpTestBinding binding;
     private Button btnGetData;

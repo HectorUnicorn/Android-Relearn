@@ -42,7 +42,13 @@ public enum FeatureItemEnum {
     BUTTER_KNIFE(33, "ButterKnife"),
     DOKIT(34, "DoKit"),
     OKHTTP(35, "OkHttp"),
-    KOTLIN(36, "Kotlin");
+    KOTLIN(36, "Kotlin"),
+    HUMMER(37, "Hummer"),
+    MVP_DEMO(38, "MVP Demo"),
+    COMPONENTS(39, "组件化"),
+    MVVM(40, "MVVM Demo"),
+    PRIVACY(41, "隐私权限"),
+    DROUTER(42, "DRouter");
 
     FeatureItemEnum(int id, String name) {
         this.id = id;

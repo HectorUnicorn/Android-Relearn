@@ -18,9 +18,11 @@ import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
 import cc.rememberme.demo.ui.OkHttpTestActivity;
 import cc.rememberme.demo.ui.butterknife.ButterKnifeActivity;
+import cc.rememberme.demo.ui.hummer.HummerSinglePageActivity;
 import cc.rememberme.demo.ui.kotlin.KotlinMainActivity;
 import cc.rememberme.demo.ui.layout.LayoutDemoActivity;
 import cc.rememberme.demo.ui.main.listener.OnRVItemClickListener;
+import cc.rememberme.demo.ui.rxjava.RxJavaActivity;
 
 /**
  * @author : guojialin
@@ -106,7 +108,7 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
 
                 break;
             case RXJAVA:
-
+                RxJavaActivity.launch(mContext);
                 break;
             case CUSTOMIZED_VIEW:
 
@@ -182,6 +184,24 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
                 break;
             case KOTLIN:
                 KotlinMainActivity.launch((Activity) mContext, item.getName());
+                break;
+            case HUMMER:
+                HummerSinglePageActivity.launch((Activity) mContext);
+                break;
+            case MVP_DEMO:
+
+                break;
+            case COMPONENTS:
+
+                break;
+            case MVVM:
+
+                break;
+            case PRIVACY:
+
+                break;
+            case DROUTER:
+
                 break;
         }
     }

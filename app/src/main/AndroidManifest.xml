@@ -9,26 +9,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RelearnAndroid">
-        <activity
-            android:name=".ui.kotlin.KotlinMainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.OkHttpTestActivity"
-            android:exported="true" />
-        <activity android:name=".ui.butterknife.ButterKnifeActivity" />
+        android:theme="@style/Theme.RelearnAndroid"
+        android:usesCleartextTraffic="true">
+        <!-- usesCleartextTraffic: https://blog.csdn.net/jing_80/article/details/89492429-->
         <activity android:name=".MainActivity" />
         <activity
             android:name=".MainTabActivity"
-            android:label="@string/title_activity_main_tab"
+            android:label="@string/app_name"
             android:theme="@style/Theme.RelearnAndroid.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.layout.LayoutDemoActivity" />
+        <activity
+            android:name=".ui.OkHttpTestActivity"
+            android:exported="true" />
+        <activity android:name=".ui.butterknife.ButterKnifeActivity" />
+        <activity
+            android:name=".ui.kotlin.KotlinMainActivity"
+            android:exported="true" />
+        <activity android:name=".ui.rxjava.RxJavaActivity" />
+        <activity
+            android:name=".ui.hummer.HummerSinglePageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.drouter.DRouterMainActivity" />
     </application>
 
 </manifest>

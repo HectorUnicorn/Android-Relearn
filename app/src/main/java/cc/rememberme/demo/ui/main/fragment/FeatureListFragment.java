@@ -1,5 +1,6 @@
 package cc.rememberme.demo.ui.main.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cc.rememberme.demo.base.fragment.BaseFragment;
 import cc.rememberme.demo.databinding.FragmentMainFeatureListBinding;
+import cc.rememberme.demo.ui.hummer.HummerSinglePageActivity;
 import cc.rememberme.demo.ui.main.PageViewModel;
 import cc.rememberme.demo.ui.main.adapter.FeatureListAdapter;
+import cc.rememberme.demo.ui.rxjava.RxJavaActivity;
 
 public class FeatureListFragment extends BaseFragment {
+
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private boolean isInited = false;
 
     private PageViewModel pageViewModel;
     private FragmentMainFeatureListBinding binding;
@@ -67,6 +72,15 @@ public class FeatureListFragment extends BaseFragment {
         recyclerView.setAdapter(featureListAdapter);
 
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (!isInited) {
+            HummerSinglePageActivity.launch((Activity) this.getContext());
+            isInited = true;
+        }
     }
 
     @Override
