@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="cc.rememberme.demo">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
     <application
         android:name=".MainApplication"
@@ -11,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RelearnAndroid"
         android:usesCleartextTraffic="true">
-        <!-- usesCleartextTraffic: https://blog.csdn.net/jing_80/article/details/89492429-->
+        <!-- usesCleartextTraffic: https://blog.csdn.net/jing_80/article/details/89492429 -->
         <activity android:name=".MainActivity" />
         <activity
             android:name=".MainTabActivity"
@@ -19,6 +24,7 @@
             android:theme="@style/Theme.RelearnAndroid.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,6 +41,55 @@
             android:name=".ui.hummer.HummerSinglePageActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.drouter.DRouterMainActivity" />
+        <activity
+            android:name=".ui.nav.NavChildActivity"
+            android:theme="@style/Theme.RelearnAndroid.NoActionBar">
+
+            <!-- <intent-filter android:autoVerify="true"> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- &lt;!&ndash; Activities that can be safely invoked from a browser must support this -->
+            <!-- category. For example, if the user is viewing a web page or an e-mail and -->
+            <!-- clicks on a link in the text, the Intent generated execute that link will -->
+            <!-- require the BROWSABLE category, so that only activities supporting this -->
+            <!-- category will be considered as possible actions.  &ndash;&gt; -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+            <!-- <data -->
+            <!-- android:host="demo.relearn.cc" -->
+            <!-- android:pathPrefix="/child" -->
+            <!-- android:scheme="relearn" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.nav.NavMainActivity"
+            android:theme="@style/Theme.RelearnAndroid.NoActionBar">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                Activities that can be safely invoked from a browser must support this
+                category. For example, if the user is viewing a web page or an e-mail and
+                clicks on a link in the text, the Intent generated execute that link will
+                require the BROWSABLE category, so that only activities supporting this
+                category will be considered as possible actions.
+                -->
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="demo.relearn.cc"
+                    android:scheme="relearn" />
+            </intent-filter>
+            <!-- 构建项目时，Navigation 组件会将 <nav-graph> 元素替换为生成的 <intent-filter> 元素，以匹配导航图中的所有深层链接。 -->
+            <!-- <nav-graph android:value="@navigation/nav_graph" /> -->
+        </activity>
+        <activity android:name=".ui.coroutine.CoroutineTestActivity">
+        </activity>
+
+        <service
+            android:name=".service.MyLifecycleService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

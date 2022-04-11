@@ -78,7 +78,7 @@ public class FeatureListFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         if (!isInited) {
-            HummerSinglePageActivity.launch((Activity) this.getContext());
+//            HummerSinglePageActivity.launch((Activity) this.getContext());
             isInited = true;
         }
     }

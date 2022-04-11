@@ -48,7 +48,10 @@ public enum FeatureItemEnum {
     COMPONENTS(39, "组件化"),
     MVVM(40, "MVVM Demo"),
     PRIVACY(41, "隐私权限"),
-    DROUTER(42, "DRouter");
+    DROUTER(42, "DRouter"),
+    DAGGER2(43, "Daggger2"),
+    NAVIGATION(44, "Nav"),
+    KOTLIN_COROUTINE(45, "协程");
 
     FeatureItemEnum(int id, String name) {
         this.id = id;

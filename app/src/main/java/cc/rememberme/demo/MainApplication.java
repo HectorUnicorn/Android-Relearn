@@ -19,6 +19,7 @@ import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 import com.tencent.mmkv.MMKV;
 
+import androidx.lifecycle.ProcessLifecycleOwner;
 import butterknife.ButterKnife;
 import cc.rememberme.demo.config.GlobalConfig;
 
@@ -31,6 +32,8 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        ProcessLifecycleOwner.get().getLifecycle().addObserver(new ApplicationObserver(this));
+
         // logger
         initLogger();
 
@@ -49,14 +52,8 @@ public class MainApplication extends Application {
         // hummer - https://hummer.didi.cn/doc#/zh-CN/android_doc
         initHummer();
 
-        // init drouter
-        initDRouter();
-
     }
 
-    private void initDRouter() {
-        DRouter.init(this);
-    }
 
     private void initHummer() {
                 /*

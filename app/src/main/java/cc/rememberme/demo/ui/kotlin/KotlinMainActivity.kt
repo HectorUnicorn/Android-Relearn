@@ -31,6 +31,6 @@ open class KotlinMainActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(this, "Hi from kotlin", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Hi from kotlin", Toast.LENGTH_SHORT).show()
     }
 }

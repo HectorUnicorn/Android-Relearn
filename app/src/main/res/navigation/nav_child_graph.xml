@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_child_graph"
+    app:startDestination="@id/navHomeFragment2">
+
+    <fragment
+        android:id="@+id/navHomeFragment2"
+        android:name="cc.rememberme.demo.ui.nav.fragment.NavHomeFragment"
+        android:label="fragment_nav_home"
+        tools:layout="@layout/fragment_nav_home">
+        <action
+            android:id="@+id/action_navHomeFragment2_to_navSecondFragment2"
+            app:destination="@id/navSecondFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSecondFragment2"
+        android:name="cc.rememberme.demo.ui.nav.fragment.NavSecondFragment"
+        android:label="fragment_nav_second"
+        tools:layout="@layout/fragment_nav_second">
+        <action
+            android:id="@+id/action_navSecondFragment2_to_navThirdFragment2"
+            app:destination="@id/navThirdFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navThirdFragment2"
+        android:name="cc.rememberme.demo.ui.nav.fragment.NavThirdFragment"
+        android:label="fragment_nav_third"
+        tools:layout="@layout/fragment_nav_third">
+        <action
+            android:id="@+id/action_navThirdFragment2_to_navHomeFragment2"
+            app:destination="@id/navHomeFragment2" />
+        <deepLink app:uri="@string/nav_child_third_url" />
+    </fragment>
+</navigation>

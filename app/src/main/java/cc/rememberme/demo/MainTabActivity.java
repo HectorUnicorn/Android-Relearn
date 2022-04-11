@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import cc.rememberme.demo.databinding.ActivityMainTabBinding;
 import cc.rememberme.demo.ui.main.SectionsPagerAdapter;
+import cc.rememberme.demo.ui.nav.NavMainActivity;
 
 public class MainTabActivity extends AppCompatActivity {
 
@@ -47,6 +48,8 @@ public class MainTabActivity extends AppCompatActivity {
                         }).show();
             }
         });
+
+        NavMainActivity.launch(this);
     }
 
     @Override

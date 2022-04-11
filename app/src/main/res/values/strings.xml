@@ -10,4 +10,9 @@
         preview等功能。\n和SurfaceView不同，它不会在WMS中单独创建窗口，而是作为View\n
         hierachy中的一个普通View，因此可以和其它普通View一样进行移动，旋转，缩放\n，动画等变化。值得注意的是TextureView必须在硬件加速的窗口中。它显示的内容流数据可以来自App进程或是远端进程。从类图中可以看到，TextureView继承自View，它与其它的View一样在View hierachy中管理与绘制。TextureView专门用来渲染像视频或OpenGL场景之类的数据的，而且TextureView只能用在具有硬件加速的Window中，如果使用的是软件渲染，TextureView将什么也不显示。也就是说对于没有GPU的设备，TextureView完全不可用。</string>
     <string name="butterknife_title">Butter Knife</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_home_title">HOME</string>
+    <string name="nav_second_title">SECOND</string>
+    <string name="nav_third_title">THIRD</string>
 </resources>

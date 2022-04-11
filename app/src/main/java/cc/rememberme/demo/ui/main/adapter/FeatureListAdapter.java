@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import cc.rememberme.demo.ui.nav.NavMainActivity;
 import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
 import cc.rememberme.demo.ui.OkHttpTestActivity;
@@ -202,6 +203,16 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
                 break;
             case DROUTER:
 
+                break;
+            case DAGGER2:
+                break;
+            case NAVIGATION:
+                NavMainActivity.launch((Activity) mContext);
+                break;
+            case KOTLIN_COROUTINE:
+
+                break;
+            default:
                 break;
         }
     }

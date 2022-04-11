@@ -6,4 +6,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="large_view_height">2048dp</dimen>
+    <dimen name="nav_bar_height">64dp</dimen>
 </resources>

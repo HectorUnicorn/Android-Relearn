@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_third_url">relearn://demo.relearn.cc/nav-third</string>
+    <string name="nav_child_third_url">relearn://demo.relearn.cc/child/nav-third</string>
+</resources>

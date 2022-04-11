@@ -13,6 +13,11 @@ buildscript {
         classpath "io.github.didi:drouter-plugin-proxy:1.0.1"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        // Navigation 组件具有一个名为 Safe Args 的 Gradle 插件，该插件可以生成简单的 object 和 builder 类，
+        // 以便以类型安全的方式浏览和访问任何关联的参数。我们强烈建议您将 Safe Args 用于导航和数据传递，因为它可以确保类型安全。
+        def nav_version = "2.3.5"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 
