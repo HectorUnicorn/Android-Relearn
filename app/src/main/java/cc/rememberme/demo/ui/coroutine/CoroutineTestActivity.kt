@@ -32,7 +32,7 @@ public class CoroutineTestActivity : AppCompatActivity() {
 
     suspend fun fetchDoc() {
         val result = get("https://developer.android.com")
-        show(result)
+//        show(result)
     }
 
     suspend fun get(url: String) = withContext(Dispatchers.IO) {
