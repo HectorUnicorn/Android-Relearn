@@ -20,7 +20,9 @@ object ObjectSingletonDemo {
 fun main() {
     ObjectSingletonDemo.doSomething()
 
+    //
     val pSingle = object : BattlePlayer("Singleton") {
+        // 重写方法
         override fun battle() {
             println("IN p class battle()")
         }
