@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import cc.rememberme.demo.databinding.ActivityMainTabBinding;
 import cc.rememberme.demo.ui.main.SectionsPagerAdapter;
-import cc.rememberme.demo.ui.nav.NavMainActivity;
 
 public class MainTabActivity extends AppCompatActivity {
 
@@ -43,13 +42,17 @@ public class MainTabActivity extends AppCompatActivity {
                         .setAction("Action", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                MainTabActivity.this.openOptionsMenu();
+//                                MainTabActivity.this.openOptionsMenu();
+
                             }
                         }).show();
             }
         });
 
-        NavMainActivity.launch(this);
+        // Jetpack Navigation测试
+//        NavMainActivity.launch(this);
+
+
     }
 
     @Override

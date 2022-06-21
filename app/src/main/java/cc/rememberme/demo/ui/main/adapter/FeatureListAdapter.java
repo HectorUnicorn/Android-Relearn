@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import cc.rememberme.demo.ui.drouter.DRouterMainActivity;
 import cc.rememberme.demo.ui.nav.NavMainActivity;
 import cc.rememberme.demo.R;
 import cc.rememberme.demo.constant.FeatureItemEnum;
@@ -202,7 +203,7 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
 
                 break;
             case DROUTER:
-
+                DRouterMainActivity.launch((Activity) mContext);
                 break;
             case DAGGER2:
                 break;

@@ -10,10 +10,10 @@ import cc.rememberme.demo.base.activity.BaseActivity;
 
 /**
  * @author guojialin
- * @since 2021-10-11 11:22
+ * @since 2022-06-21 20:33
  */
-@Router(scheme = "didi", host = "router", path = "/login")
-public class SecondDRouterActivity extends BaseActivity {
+@Router(scheme = "didi", host = "router", path = "/logout")
+public class ThirdDRouterActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -21,4 +21,5 @@ public class SecondDRouterActivity extends BaseActivity {
         Bundle extras = getIntent().getExtras();
         Logger.d("extras:" + extras.toString());
     }
+
 }

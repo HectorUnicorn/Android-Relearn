@@ -9,5 +9,4 @@ import cc.rememberme.demo.BuildConfig;
 public class GlobalConfig {
 
     public static final boolean LOG_DEBUG = BuildConfig.DEBUG;
-
 }
