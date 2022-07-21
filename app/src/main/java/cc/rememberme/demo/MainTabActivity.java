@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import cc.rememberme.demo.databinding.ActivityMainTabBinding;
+import cc.rememberme.demo.ui.coroutine.CoroutineTestActivity;
 import cc.rememberme.demo.ui.main.SectionsPagerAdapter;
 
 public class MainTabActivity extends AppCompatActivity {
@@ -38,12 +39,12 @@ public class MainTabActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CoroutineTestActivity.launch(MainTabActivity.this);
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-//                                MainTabActivity.this.openOptionsMenu();
-
+                                MainTabActivity.this.openOptionsMenu();
                             }
                         }).show();
             }

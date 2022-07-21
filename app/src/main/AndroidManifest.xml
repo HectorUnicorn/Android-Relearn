@@ -89,11 +89,11 @@
             android:enabled="true"
             android:exported="true" />
 
-        <provider
-            android:name="com.didi.drouter.remote.RemoteProvider"
-            android:authorities="cc.rememberme.demo"
-            android:exported="false"
-            android:multiprocess="false" />
+<!--        <provider-->
+<!--            android:name="com.didi.drouter.remote.RemoteProvider"-->
+<!--            android:authorities="cc.rememberme.demo"-->
+<!--            android:exported="true"-->
+<!--            android:multiprocess="false" />-->
 
     </application>
 

@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import cc.rememberme.demo.ui.coroutine.CoroutineTestActivity;
 import cc.rememberme.demo.ui.drouter.DRouterMainActivity;
 import cc.rememberme.demo.ui.nav.NavMainActivity;
 import cc.rememberme.demo.R;
@@ -211,7 +212,7 @@ public class FeatureListAdapter extends RecyclerView.Adapter<FeatureListAdapter.
                 NavMainActivity.launch((Activity) mContext);
                 break;
             case KOTLIN_COROUTINE:
-
+                CoroutineTestActivity.launch((Activity) mContext);
                 break;
             default:
                 break;

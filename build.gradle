@@ -2,15 +2,17 @@
 buildscript {
     ext.kotlin_version = '1.5.21'
     repositories {
-        google()
+        mavenLocal()
         mavenCentral()
-        jcenter()
+        maven { url 'file://' + rootDir.absolutePath + "/repo" }
+        maven { url 'https://artifactory.intra.xiaojukeji.com/artifactory/public/' }
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // drouter
-        classpath "io.github.didi:drouter-plugin-proxy:1.0.1"
+        classpath "com.xiaoju.nova:drouter-plugin-proxy:0.0.1"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
@@ -23,9 +25,14 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        mavenLocal()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'file://' + System.getProperty('user.dir') + '/build/repo' }
+        maven { url 'file://' + rootDir.absolutePath + "/repo" }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://artifactory.intra.xiaojukeji.com/artifactory/public/' }
+        maven { url 'https://download.flutter.io' }
+        google()
     }
 }
 

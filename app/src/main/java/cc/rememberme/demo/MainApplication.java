@@ -5,8 +5,6 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-
-import com.didi.drouter.api.DRouter;
 import com.didi.hummer.Hummer;
 import com.didi.hummer.HummerConfig;
 import com.didi.hummer.adapter.navigator.NavCallback;
@@ -29,9 +27,13 @@ import cc.rememberme.demo.config.GlobalConfig;
  */
 public class MainApplication extends Application {
 
+    public static MainApplication INS;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        INS = this;
+
         ProcessLifecycleOwner.get().getLifecycle().addObserver(new ApplicationObserver(this));
 
         // logger

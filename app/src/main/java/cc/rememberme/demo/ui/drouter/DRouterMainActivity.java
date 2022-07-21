@@ -5,11 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.didi.drouter.api.DRouter;
-import com.didi.drouter.api.Extend;
-import com.didi.drouter.router.Result;
 import com.didi.drouter.router.RouterCallback;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cc.rememberme.demo.base.activity.BaseActivity;
 import cc.rememberme.demo.databinding.ActivityDrouterMainBinding;
@@ -37,15 +34,28 @@ public class DRouterMainActivity extends BaseActivity {
         setContentView(binding.getRoot());
 
         binding.btnJump.setOnClickListener(v -> {
-            DRouter.build("didi://router/login")
-                    .putExtra("key", "value")
-                    .start(this, new RouterCallback() {
-                                @Override
-                                public void onResult(@NonNull Result result) {
-                                    boolean r = result.isActivityStarted();
-                                }
-                            }
-                    );
+//            DRouter.build("didi://router/login")
+//                    .putExtra("key", "value")
+//                    .start(this, new RouterCallback() {
+//                                @Override
+//                                public void onResult(@NonNull Result result) {
+//                                    boolean r = result.isActivityStarted();
+//                                }
+//                            }
+//                    );
+
+//            DRouter.build("appassist://router/map/nav/callback")
+//                    .putExtra("1", 1)
+//                    .putExtra("2", new Bundle())
+//                    .putAddition("3", new ParamObject())
+//                    .setRemoteAuthority("com.didichuxing.car.appassistant")
+//                    .start(this);
+
+            DRouter.build("appassist://router/map")
+                    .setRemoteAuthority("com.didichuxing.car.appassistant")
+//                    .putExtra("nav", "success")
+                    .start(this);
+
         });
 
         binding.btnJump2.setOnClickListener(v -> {

@@ -36,7 +36,8 @@ public class NavMainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         navController = Navigation
                 .findNavController(this, R.id.fragmentContainerView);
-        navController.getNavigatorProvider().addNavigator(new CustomNavigatorProvider(this));
+        // TODO: fix the crash
+//        navController.getNavigatorProvider().addNavigator(new CustomNavigatorProvider(this));
 
         // ActionBar
 //        NavigationUI.setupActionBarWithNavController(this, navController);
