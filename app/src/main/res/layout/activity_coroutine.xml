@@ -23,11 +23,55 @@
             android:text="开始协程" />
 
         <Button
+            android:id="@+id/btnMiddleAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="onClick"
+            android:text="中间操作" />
+
+        <Button
             android:id="@+id/btnEndCoroutine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:onClick="onClick"
             android:text="取消协程" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnStartCoroutine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="onClick"
+            android:text="开始协程2" />
+
+        <Button
+            android:id="@+id/btnMiddleAction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="onClick"
+            android:text="中间操作2" />
+
+        <Button
+            android:id="@+id/btnEndCoroutine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="onClick"
+            android:text="取消协程2" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
